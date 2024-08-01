@@ -1,0 +1,121 @@
+# General
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Rider project files
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code project files
+.vscode/
+.vscode/*
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# NFS drives
+*.nfs*
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotNet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# StyleCop
+StyleCopReport.xml
+
+# Uncomment if you have tasks that create the SQL files in the root of the project directory
+# *.sql
+
+# Uncomment if you have tasks that create the JSON files in the root of the project directory
+# *.json
+
+# DotNet Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Resharper
+_ReSharper.Caches
+*.ReSharper
+*.ReSharper.user
+resharper.log
+extensions.json
+
+# Rider
+.idea/
+.idea/*
+.idea/*.iml
+.idea/*/
+.idea/*/workspace.xml
+
+# DotSettings files
+*.DotSettings
+*.DotSettings.user
+
+# Coverage Results
+coverage*
+
+# NCrunch
+_NCrunch_*
+.*crunch*
+nCrunchTemp_*
+
+# Web specific
+wwwroot/lib/
+**/node_modules/
+
+# Others
+*~
+
+
+# Include custom environment variables, local configuration files, etc.
+appsettings.*.local.json
+
+# Include any certificate files (such as for HTTPS)
+*.pfx
+*.p12
+
+# Uncomment if you have tasks that create the HTML files in the root of the project directory
+# *.html

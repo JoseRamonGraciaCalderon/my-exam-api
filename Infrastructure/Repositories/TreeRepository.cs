@@ -57,7 +57,6 @@ namespace Infrastructure.Repositories
                 await SaveTreeAsync(tree);
             }
         }
-
         public async Task DeleteNodeAsync(string id)
         {
             var tree = await GetTreeAsync();
