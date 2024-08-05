@@ -30,8 +30,20 @@ builder.Services.AddScoped<ITreeRepository, TreeRepository>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 // Configure problem details (RFC 7807)
-builder.Services.AddProblemDetails();
-
+builder.Services.AddProblemDetails(options =>
+{
+    options.IncludeExceptionDetails = (ctx, ex) => builder.Environment.IsDevelopment();
+    options.Map<Exception>((ctx, ex) =>
+    {
+        var logger = ctx.RequestServices.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, ex.Message);
+        return new StatusCodeProblemDetails(StatusCodes.Status500InternalServerError)
+        {
+            Title = "An unexpected error occurred!",
+            Detail = ex.Message
+        };
+    });
+});
 // Configure CORS
 builder.Services.AddCors(options =>
 {

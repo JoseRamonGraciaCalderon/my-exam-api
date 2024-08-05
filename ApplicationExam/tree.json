@@ -1,24 +1,13 @@
 [
   {
-    "Id": "68b49f23-28f9-4361-904f-b73485474ec7",
-    "Name": "asd",
+    "Id": "ccc06164-61b4-4591-aa8e-6b50e1c87213",
+    "Name": "noaaaaaaaaaaaaa",
     "Children": [
       {
-        "Id": "30ce31a2-a156-4bf4-97e3-22bf35db4539",
-        "Name": "b",
-        "Children": [
-          {
-            "Id": "93e2d630-065e-44a7-a5f4-38692ad4c1ce",
-            "Name": "c",
-            "Children": []
-          }
-        ]
+        "Id": "cc328661-ff95-4fc6-87f2-46bfb1c50dfc",
+        "Name": "nodo 1.1.2",
+        "Children": []
       }
     ]
-  },
-  {
-    "Id": "c248040b-0ef9-4a28-a2c2-ad0cb433ba33",
-    "Name": "sadsad",
-    "Children": []
   }
 ]

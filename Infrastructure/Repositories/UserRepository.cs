@@ -5,6 +5,7 @@ using System.Data;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Interfaces;
+using Npgsql;
 
 namespace Infrastructure.Repositories
 {
@@ -25,26 +26,38 @@ namespace Infrastructure.Repositories
 
         public async Task<User> GetUserAsync(Guid id)
         {
-            var sql = "SELECT * FROM GetUser(@Id)";
-            return await _dbConnection.QuerySingleOrDefaultAsync<User>(sql, new { Id = id });
+            var sql = "SELECT * FROM GetUser(@userId)";
+            return await _dbConnection.QuerySingleOrDefaultAsync<User>(sql, new { userId = id });
         }
 
         public async Task AddUserAsync(User user)
         {
-            var sql = "SELECT AddUser(@Id, @Name, @Email, @PdfFilePath)";
-            await _dbConnection.ExecuteAsync(sql, user);
+            var sql = "CALL AddUser(@Id, @Name, @Email, @PdfFilePath)";
+            await _dbConnection.ExecuteAsync(sql, new
+            {
+                user.Id,
+                user.Name,
+                user.Email,
+                user.PdfFilePath
+            });
         }
 
         public async Task UpdateUserAsync(User user)
         {
-            var sql = "SELECT UpdateUser(@Id, @Name, @Email, @PdfFilePath)";
-            await _dbConnection.ExecuteAsync(sql, user);
+            var sql = "CALL UpdateUser(@Id, @Name, @Email, @PdfFilePath)";
+            await _dbConnection.ExecuteAsync(sql, new
+            {
+                user.Id,
+                user.Name,
+                user.Email,
+                user.PdfFilePath
+            });
         }
 
         public async Task DeleteUserAsync(Guid id)
         {
-            var sql = "SELECT DeleteUser(@Id)";
-            await _dbConnection.ExecuteAsync(sql, new { Id = id });
+            var sql = "CALL DeleteUser(@userId)";
+            await _dbConnection.ExecuteAsync(sql, new { userId = id });
         }
     }
 }

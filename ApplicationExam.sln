@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationExam", "ApplicationExam\ApplicationExam.csproj", "{798E79D9-3F76-434D-A1E2-045680CCA4EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationExam", "ApplicationExam\ApplicationExam.csproj", "{798E79D9-3F76-434D-A1E2-045680CCA4EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{24142E56-1D35-4832-A509-4625FEA6121B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{24142E56-1D35-4832-A509-4625FEA6121B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{F32F9052-75EF-4CFA-ACBC-775082F79366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{F32F9052-75EF-4CFA-ACBC-775082F79366}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{CA1B3BC9-5D79-4D83-AE52-FEF14DB61B32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{CA1B3BC9-5D79-4D83-AE52-FEF14DB61B32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDCFA28C-F1FB-4B82-857B-A3814232486D}"
+	ProjectSection(SolutionItems) = preProject
+		gitignore.txt = gitignore.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
